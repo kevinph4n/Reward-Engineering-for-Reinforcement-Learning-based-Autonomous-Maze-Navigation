@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "enabled_modules": [
+    "checkpoint",
+    "explore_penalty",
+    "goal",
+    "heading",
+    "memory_loop",
+    "obstacle",
+    "rotation",
+    "step"
+  ],
+  "total_formula": "Đến goal #1 +  Chạm checkpoint #1 +  Lại gần goal #1 +  Tiến xa goal #1 +  Bước tới ô mới #1 +  Tiến lên thành công #1 +  Va chạm tường #1 +  Mỗi Action #1 +  Xoay tại chỗ #1 +  Xoay sang hướng thông thoáng #1 +  Xoay tại chỗ liên tục #1 +  Xoay khi có thể đi thẳng #1 +  Xoay hướng bị chặn #1 +  Lặp ô gần #1 +  Quay lại ô #1 +  Đi qua đi lại liên tục #1 +  0.0 +  Bước tới ô mới #2",
+  "element_weights": {
+    "R_STEP": -1,
+    "collision": -500,
+    "forward_clear": 10,
+    "wall_detected": 0,
+    "wall_visible": 0,
+    "wall_on_entry": 0,
+    "goal_closer": 3,
+    "goal_farther": -4,
+    "goal_reached": 2500,
+    "cp_closer": 0,
+    "cp_farther": 0,
+    "checkpoint": 0,
+    "rotate": 0,
+    "facing_clear": 20,
+    "wasted_rotate": -4,
+    "blocked_rotate": -18,
+    "rotate_to_n": 0,
+    "rotate_to_e": 0,
+    "rotate_to_s": 0,
+    "rotate_to_w": 0,
+    "forward_n": 0,
+    "forward_e": 0,
+    "forward_s": 0,
+    "forward_w": 0,
+    "forward_new_cell": 40,
+    "excess_rotate": -100,
+    "visit_window": -2,
+    "visit_repeat": -8,
+    "ping_pong": -25,
+    "straight_streak_reach": 0,
+    "straight_streak_cap": 0
+  },
+  "thresholds": {
+    "CP_TARGET_INDEX": 1,
+    "MAX_ROTATE_STREAK": 2,
+    "MAX_REVISIT_STEPS": 20,
+    "MAX_CELL_REPEAT": 2,
+    "MAX_PING_PONG_CYCLES": 1,
+    "MAX_PING_PONG_SPAN": 8,
+    "MAX_STRAIGHT_REACH": 0,
+    "MAX_STRAIGHT_CAP": 0
+  },
+  "instance_configs": {
+    "goal_reached#1": {
+      "eid": "goal_reached",
+      "weight": 2500,
+      "thresholds": {}
+    },
+    "checkpoint#1": {
+      "eid": "checkpoint",
+      "weight": 0,
+      "thresholds": {
+        "CP_TARGET_INDEX": 1
+      }
+    },
+    "goal_closer#1": {
+      "eid": "goal_closer",
+      "weight": 3,
+      "thresholds": {}
+    },
+    "goal_farther#1": {
+      "eid": "goal_farther",
+      "weight": -4,
+      "thresholds": {}
+    },
+    "forward_new_cell#1": {
+      "eid": "forward_new_cell",
+      "weight": 40,
+      "thresholds": {}
+    },
+    "forward_clear#1": {
+      "eid": "forward_clear",
+      "weight": 10,
+      "thresholds": {}
+    },
+    "collision#1": {
+      "eid": "collision",
+      "weight": -500,
+      "thresholds": {}
+    },
+    "R_STEP#1": {
+      "eid": "R_STEP",
+      "weight": -1,
+      "thresholds": {}
+    },
+    "rotate#1": {
+      "eid": "rotate",
+      "weight": 0,
+      "thresholds": {}
+    },
+    "facing_clear#1": {
+      "eid": "facing_clear",
+      "weight": 20,
+      "thresholds": {}
+    },
+    "excess_rotate#1": {
+      "eid": "excess_rotate",
+      "weight": -100,
+      "thresholds": {
+        "MAX_ROTATE_STREAK": 2
+      }
+    },
+    "wasted_rotate#1": {
+      "eid": "wasted_rotate",
+      "weight": -4,
+      "thresholds": {}
+    },
+    "blocked_rotate#1": {
+      "eid": "blocked_rotate",
+      "weight": -18,
+      "thresholds": {}
+    },
+    "visit_window#1": {
+      "eid": "visit_window",
+      "weight": -2,
+      "thresholds": {
+        "MAX_REVISIT_STEPS": 20
+      }
+    },
+    "visit_repeat#1": {
+      "eid": "visit_repeat",
+      "weight": -8,
+      "thresholds": {
+        "MAX_CELL_REPEAT": 2
+      }
+    },
+    "ping_pong#1": {
+      "eid": "ping_pong",
+      "weight": -25,
+      "thresholds": {
+        "MAX_PING_PONG_CYCLES": 1,
+        "MAX_PING_PONG_SPAN": 8
+      }
+    },
+    "forward_new_cell#2": {
+      "eid": "forward_new_cell",
+      "weight": 10,
+      "thresholds": {}
+    }
+  },
+  "threshold_instances": {
+    "checkpoint#1:CP_TARGET_INDEX": 1,
+    "excess_rotate#1:MAX_ROTATE_STREAK": 2,
+    "visit_window#1:MAX_REVISIT_STEPS": 20,
+    "visit_repeat#1:MAX_CELL_REPEAT": 2,
+    "ping_pong#1:MAX_PING_PONG_CYCLES": 1,
+    "ping_pong#1:MAX_PING_PONG_SPAN": 8
+  },
+  "name": "optimized_v16_goal_first_map_lon"
+}

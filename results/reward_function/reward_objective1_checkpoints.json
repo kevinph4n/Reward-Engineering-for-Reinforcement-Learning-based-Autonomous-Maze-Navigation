@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "enabled_modules": [
+    "checkpoint",
+    "explore_penalty",
+    "goal",
+    "heading",
+    "memory_loop",
+    "obstacle",
+    "rotation",
+    "step"
+  ],
+  "total_formula": "Đến goal #1 +  Chạm checkpoint #1 +  Va chạm tường #1 +  Mỗi Action #1 +  Lại gần goal #1 +  Tiến xa goal #1 +  Lại gần checkpoint #1 +  Đi xa checkpoint #1 +  Tiến lên thành công #1 +  Quay lại ô #1 +  Xoay tại chỗ liên tục #1 +  Đi qua đi lại liên tục #1 +  Phát hiện tường lần đầu #1 +  Vào ô có cạnh tường #1 +  Xoay sang hướng N #1 +  Xoay sang hướng E #1 +  Xoay sang hướng S #1 +  Xoay sang hướng W #1 +  Bước ở hướng N #1 +  Bước ở hướng E #1 +  Bước ở hướng S #1 +  Bước ở hướng W #1 +  Bước tới ô mới #1 +  Giữ hướng #1",
+  "element_weights": {
+    "R_STEP": -0.1,
+    "collision": -3,
+    "forward_clear": 10,
+    "wall_detected": 2,
+    "wall_visible": 1.0,
+    "wall_on_entry": 2,
+    "goal_closer": 0.3,
+    "goal_farther": -0.1,
+    "goal_reached": 100,
+    "cp_closer": 0.2,
+    "cp_farther": -0.1,
+    "checkpoint": 25,
+    "rotate": 1.0,
+    "facing_clear": 5,
+    "wasted_rotate": 1.0,
+    "blocked_rotate": -10,
+    "rotate_to_n": 5,
+    "rotate_to_e": 5,
+    "rotate_to_s": 5,
+    "rotate_to_w": 5,
+    "forward_n": 1.0,
+    "forward_e": 1.0,
+    "forward_s": 1.0,
+    "forward_w": 10,
+    "forward_new_cell": -5,
+    "excess_rotate": -300,
+    "visit_window": 1.0,
+    "visit_repeat": -0.5,
+    "ping_pong": -3,
+    "straight_streak_reach": 0.1,
+    "straight_streak_cap": 5
+  },
+  "thresholds": {
+    "CP_TARGET_INDEX": 1,
+    "MAX_ROTATE_STREAK": 3,
+    "MAX_REVISIT_STEPS": 4,
+    "MAX_CELL_REPEAT": 2,
+    "MAX_PING_PONG_CYCLES": 10,
+    "MAX_PING_PONG_SPAN": 10,
+    "MAX_STRAIGHT_REACH": 10,
+    "MAX_STRAIGHT_CAP": 3
+  },
+  "instance_configs": {
+    "goal_reached#1": {
+      "eid": "goal_reached",
+      "weight": 100,
+      "thresholds": {}
+    },
+    "checkpoint#1": {
+      "eid": "checkpoint",
+      "weight": 25,
+      "thresholds": {
+        "CP_TARGET_INDEX": 1
+      }
+    },
+    "collision#1": {
+      "eid": "collision",
+      "weight": -3,
+      "thresholds": {}
+    },
+    "R_STEP#1": {
+      "eid": "R_STEP",
+      "weight": -0.1,
+      "thresholds": {}
+    },
+    "goal_closer#1": {
+      "eid": "goal_closer",
+      "weight": 0.3,
+      "thresholds": {}
+    },
+    "goal_farther#1": {
+      "eid": "goal_farther",
+      "weight": -0.1,
+      "thresholds": {}
+    },
+    "cp_closer#1": {
+      "eid": "cp_closer",
+      "weight": 0.2,
+      "thresholds": {
+        "CP_TARGET_INDEX": 1
+      }
+    },
+    "cp_farther#1": {
+      "eid": "cp_farther",
+      "weight": -0.1,
+      "thresholds": {
+        "CP_TARGET_INDEX": 1
+      }
+    },
+    "forward_clear#1": {
+      "eid": "forward_clear",
+      "weight": 10,
+      "thresholds": {}
+    },
+    "visit_repeat#1": {
+      "eid": "visit_repeat",
+      "weight": -0.5,
+      "thresholds": {
+        "MAX_CELL_REPEAT": 2
+      }
+    },
+    "excess_rotate#1": {
+      "eid": "excess_rotate",
+      "weight": -300,
+      "thresholds": {
+        "MAX_ROTATE_STREAK": 3
+      }
+    },
+    "ping_pong#1": {
+      "eid": "ping_pong",
+      "weight": -3,
+      "thresholds": {
+        "MAX_PING_PONG_CYCLES": 10,
+        "MAX_PING_PONG_SPAN": 10
+      }
+    },
+    "wall_detected#1": {
+      "eid": "wall_detected",
+      "weight": 2,
+      "thresholds": {}
+    },
+    "wall_on_entry#1": {
+      "eid": "wall_on_entry",
+      "weight": 2,
+      "thresholds": {}
+    },
+    "rotate_to_n#1": {
+      "eid": "rotate_to_n",
+      "weight": 5,
+      "thresholds": {}
+    },
+    "rotate_to_e#1": {
+      "eid": "rotate_to_e",
+      "weight": 5,
+      "thresholds": {}
+    },
+    "rotate_to_s#1": {
+      "eid": "rotate_to_s",
+      "weight": 5,
+      "thresholds": {}
+    },
+    "rotate_to_w#1": {
+      "eid": "rotate_to_w",
+      "weight": 5,
+      "thresholds": {}
+    },
+    "forward_n#1": {
+      "eid": "forward_n",
+      "weight": 1.0,
+      "thresholds": {}
+    },
+    "forward_e#1": {
+      "eid": "forward_e",
+      "weight": 1.0,
+      "thresholds": {}
+    },
+    "forward_s#1": {
+      "eid": "forward_s",
+      "weight": 1.0,
+      "thresholds": {}
+    },
+    "forward_w#1": {
+      "eid": "forward_w",
+      "weight": 10,
+      "thresholds": {}
+    },
+    "forward_new_cell#1": {
+      "eid": "forward_new_cell",
+      "weight": -5,
+      "thresholds": {}
+    },
+    "straight_streak_reach#1": {
+      "eid": "straight_streak_reach",
+      "weight": 0.1,
+      "thresholds": {
+        "MAX_STRAIGHT_REACH": 10
+      }
+    }
+  },
+  "threshold_instances": {
+    "checkpoint#1:CP_TARGET_INDEX": 1,
+    "cp_closer#1:CP_TARGET_INDEX": 1,
+    "cp_farther#1:CP_TARGET_INDEX": 1,
+    "visit_repeat#1:MAX_CELL_REPEAT": 2,
+    "excess_rotate#1:MAX_ROTATE_STREAK": 3,
+    "ping_pong#1:MAX_PING_PONG_CYCLES": 10,
+    "ping_pong#1:MAX_PING_PONG_SPAN": 10,
+    "straight_streak_reach#1:MAX_STRAIGHT_REACH": 10
+  },
+  "name": "formulatét"
+}
