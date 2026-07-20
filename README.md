@@ -4,6 +4,9 @@ A Reinforcement Learning (RL) policy optimization project developed during a rob
 
 Instead of modifying the learning algorithm itself, our team focused on **reward engineering** to improve the agent's navigation behaviour through iterative experimentation and policy refinement.
 
+<img width="854" height="855" alt="image" src="https://github.com/user-attachments/assets/1e078e78-8828-46ba-a65d-fc04afccdf25" />
+
+
 ---
 
 ## Team
