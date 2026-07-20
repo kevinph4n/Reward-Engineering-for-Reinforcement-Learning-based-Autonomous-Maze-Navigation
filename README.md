@@ -162,8 +162,10 @@ Through this project we learned that:
 │   ├── Final_Presentation.pdf
 │
 ├── images/
-│   ├── maze_map_main_to_run/
+│   ├── maze_map_to_run.jpg
 │   ├── objective_agent_path/
+│       ├── objective_1_checkpoints.jpg
+│       ├── objective_2_coverage.jpg
 │
 └── results/
     ├── policy.csv
