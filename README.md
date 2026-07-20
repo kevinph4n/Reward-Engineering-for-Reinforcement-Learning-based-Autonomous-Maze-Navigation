@@ -122,7 +122,7 @@ These behaviours were gradually reduced through reward engineering and iterative
 - Evaluated on over 500 generated maps
 - Successfully optimized policies for three navigation objectives
 - Produced stable behaviours across unseen maze layouts. Improved exploration efficiency
-- Reduced collisions
+- Reduced collisions 
 - Better balance between exploration and exploitation
 
 ---
