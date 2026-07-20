@@ -165,24 +165,30 @@ Through this project we learned that:
 ```
 .
 ├── README.md
-├── LICENSE.md
+├── LICENSE
 ├── docs/
 │   ├── Final_Presentation.pdf
 │
 ├── images/
 │   ├── maze_map_to_run.jpg
-│   ├── objective_agent_path/
+│   ├── agent_trajectories/
 │       ├── objective_1_checkpoints.jpg
 │       ├── objective_2_coverage.jpg
 │
 └── results/
-    ├── policy/
-    │   ├── policy1_checkpoints.csv
-    │   ├── policy2_coverage.csv
+    ├── trained_polices/
+    │   ├── policy_objective1_checkpoints.csv
+    │   ├── policy_objective1_checkpoints.bin
+    │   ├── policy_objective2_coverage.csv
+    │   ├── policy_objective2_coverage.bin
     │
-    ├── reward_formula/
-        ├── reward1_checkpoints.json
-        ├── reward2_coverage.json
+    ├── reward_function/
+    │   ├── reward_objective1_checkpoints.json
+    │   ├── reward_objective2_coverage.json
+    │
+    ├── evaluation_maps/
+        ├── map_objective1_checkpoints.json
+        ├── map_objective2_coverage.json
 
 
 ```
