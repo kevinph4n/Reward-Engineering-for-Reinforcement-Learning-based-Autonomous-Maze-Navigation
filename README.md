@@ -167,8 +167,8 @@ Through this project we learned that:
 |
 ├── README.md
 ├── LICENSE
-├── docs/
-│   ├── Final_Presentation.pdf
+|
+├── final_presentation.pdf
 │
 ├── images/
 │   ├── maze_map_to_run.jpg
